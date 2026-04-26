@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  meditation_api:
+    image: node:20-alpine
+    container_name: meditation_api
+    restart: always
+    ports:
+      - "8715:8712"
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: sh -c "npm install && npm start"
+
+volumes:
+  node_modules: {}
+
+networks:
+  hosting:
+    ipam:
+      config:
+        - subnet: 172.16.156.0/24
+          gateway: 172.16.156.1

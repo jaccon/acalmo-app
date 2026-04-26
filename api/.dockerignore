@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+database.sqlite
+database.sqlite-journal
+uploads/music/*
+uploads/thumbnails/*
+.env
+.git
+.gitignore
+Dockerfile
+docker-compose.yml

@@ -1,0 +1,12 @@
+{
+  "watch": ["src", ".env"],
+  "ext": "js,json",
+  "ignore": [
+    "uploads/*",
+    "database.sqlite",
+    "database.sqlite-journal",
+    "agents-docs/*",
+    "node_modules"
+  ],
+  "exec": "node src/index.js"
+}
